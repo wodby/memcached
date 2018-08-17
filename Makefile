@@ -1,6 +1,6 @@
 -include env_make
 
-MEMCACHED_VER ?= 1.5.10
+MEMCACHED_VER ?= 1.5.8
 
 TAG ?= $(shell echo "${MEMCACHED_VER}" | grep -oE '^[0-9]+\.[0-9]+')
 BASE_IMAGE_TAG = $(MEMCACHED_VER)-alpine
