@@ -38,8 +38,3 @@ default params values:
     wait_seconds 1
     delay_seconds 0
 ```
-
-## Deployment
-
-Deploy Memcached to your server via [![Wodby](https://www.google.com/s2/favicons?domain=wodby.com) Wodby](https://cloud.wodby.com/stackhub).
-
