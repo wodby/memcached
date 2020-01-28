@@ -4,7 +4,7 @@ services:
 - docker
 
 env:
-- MEMCACHED_VER=1.5.20 TAGS=1.5,1,latest
+- MEMCACHED_VER=1.5.21 TAGS=1.5,1,latest
 
 script:
 - make && make test
