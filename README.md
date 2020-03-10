@@ -20,7 +20,7 @@ Overview:
 
 Supported tags and respective `Dockerfile` links:
 
-* `1.5`, `1`, `latest` [_(Dockerfile)_]
+* `1.6`, `1`, `latest` [_(Dockerfile)_]
 
 ## Orchestration Actions
 
