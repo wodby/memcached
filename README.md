@@ -1,6 +1,6 @@
 # Memcached Docker Container Image
 
-[![Build Status](https://travis-ci.org/wodby/memcached.svg?branch=master)](https://travis-ci.org/wodby/memcached)
+[![Build Status](https://github.com/wodby/memcached/workflows/Build%20docker%20image/badge.svg)](https://github.com/wodby/memcached/actions)
 [![Docker Pulls](https://img.shields.io/docker/pulls/wodby/memcached.svg)](https://hub.docker.com/r/wodby/memcached)
 [![Docker Stars](https://img.shields.io/docker/stars/wodby/memcached.svg)](https://hub.docker.com/r/wodby/memcached)
 [![Docker Layers](https://images.microbadger.com/badges/image/wodby/memcached.svg)](https://microbadger.com/images/wodby/memcached)
@@ -11,16 +11,16 @@
 
 Overview:
 
-* All images are based on Alpine Linux
-* Base image: [_/memcached](https://hub.docker.com/r/_/memcached)
-* [Travis CI builds](https://travis-ci.org/wodby/memcached) 
-* [Docker Hub](https://hub.docker.com/r/wodby/memcached)
+- All images based on Alpine Linux
+- Base image: [_/memcached](https://hub.docker.com/r/_/memcached)
+- [GitHub actions builds](https://github.com/wodby/memcached/actions) 
+- [Docker Hub](https://hub.docker.com/r/wodby/memcached)
 
 [_(Dockerfile)_]: https://github.com/wodby/memcached/tree/master/Dockerfile
 
 Supported tags and respective `Dockerfile` links:
 
-* `1.6`, `1`, `latest` [_(Dockerfile)_]
+- `1.6`, `1`, `latest` [_(Dockerfile)_]
 
 ## Orchestration Actions
 
