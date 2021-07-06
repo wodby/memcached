@@ -3,7 +3,6 @@
 MEMCACHED_VER ?= 1.6.9
 
 TAG ?= $(shell echo "${MEMCACHED_VER}" | grep -oE '^[0-9]+\.[0-9]+')
-BASE_IMAGE_TAG = $(MEMCACHED_VER)-alpine
 
 REPO = wodby/memcached
 NAME = memcached-$(MEMCACHED_VER)
@@ -20,7 +19,6 @@ default: build
 
 build:
 	docker build -t $(REPO):$(TAG) \
-		--build-arg BASE_IMAGE_TAG=$(BASE_IMAGE_TAG) \
 		--build-arg MEMCACHED_VER=$(MEMCACHED_VER) \
 		./
 
