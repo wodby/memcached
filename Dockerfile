@@ -1,6 +1,6 @@
 ARG MEMCACHED_VER
 
-FROM memcached:${MEMCACHED_VER}-alpine
+FROM memcached:${MEMCACHED_VER}-alpine3.13
 
 ENV MEMCACHED_VER="${MEMCACHED_VER}"
 
