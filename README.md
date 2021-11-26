@@ -12,7 +12,7 @@
 Overview:
 
 - All images based on Alpine Linux
-- Base image: [_/memcached](https://hub.docker.com/r/_/memcached)
+- Base image: [wodby/base-memcached](https://github.com/wodby/base-memcached)
 - [GitHub actions builds](https://github.com/wodby/memcached/actions) 
 - [Docker Hub](https://hub.docker.com/r/wodby/memcached)
 

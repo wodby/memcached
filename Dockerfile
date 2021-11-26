@@ -1,6 +1,6 @@
 ARG MEMCACHED_VER
 
-FROM memcached:${MEMCACHED_VER}-alpine
+FROM wodby/base-memcached:${MEMCACHED_VER}
 
 ENV MEMCACHED_VER="${MEMCACHED_VER}"
 
