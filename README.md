@@ -3,7 +3,6 @@
 [![Build Status](https://github.com/wodby/memcached/workflows/Build%20docker%20image/badge.svg)](https://github.com/wodby/memcached/actions)
 [![Docker Pulls](https://img.shields.io/docker/pulls/wodby/memcached.svg)](https://hub.docker.com/r/wodby/memcached)
 [![Docker Stars](https://img.shields.io/docker/stars/wodby/memcached.svg)](https://hub.docker.com/r/wodby/memcached)
-[![Docker Layers](https://images.microbadger.com/badges/image/wodby/memcached.svg)](https://microbadger.com/images/wodby/memcached)
 
 ## Docker Images
 
@@ -20,7 +19,8 @@ Overview:
 
 Supported tags and respective `Dockerfile` links:
 
-- `1.6`, `1`, `latest` [_(Dockerfile)_]
+- `1`, `latest` [_(Dockerfile)_]
+- `1-alpine3.13`, `alpine3.13` [_(Dockerfile)_]
 
 ## Orchestration Actions
 

@@ -8,14 +8,27 @@ on:
     tags:
     - '*'
 
+env:
+  DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+  DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+  MEMCACHED1: '1.6.15'
+
 jobs:
-  memcached-16:
+  memcached-1:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - uses: ./.github/actions
       with:
-        version: '1.6.15'
-        tags: 1.6,1,latest
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        version: ${{ env.MEMCACHED1 }}
+        tags: 1,latest
+        alpine_ver: 3.15
+  memcached-1-alpine313:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ./.github/actions
+      with:
+        version: ${{ env.MEMCACHED1 }}
+        tags: 1-alpine3.13,alpine3.13
+        alpine_ver: 3.13
