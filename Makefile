@@ -1,7 +1,6 @@
 -include env_make
 
 MEMCACHED_VER ?= 1.6.15
-ALPINE_VER ?= 3.15
 
 TAG ?= $(shell echo "${MEMCACHED_VER}" | grep -oE '^[0-9]+\.[0-9]+')
 
@@ -21,7 +20,6 @@ default: build
 build:
 	docker build -t $(REPO):$(TAG) \
 		--build-arg MEMCACHED_VER=$(MEMCACHED_VER) \
-		--build-arg ALPINE_VER=$(ALPINE_VER) \
 		./
 
 test:

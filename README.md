@@ -11,7 +11,7 @@
 Overview:
 
 - All images based on Alpine Linux
-- Base image: [wodby/base-memcached](https://github.com/wodby/base-memcached)
+- Base image: [_/memcached](https://hub.docker.com/_/memcached)
 - [GitHub actions builds](https://github.com/wodby/memcached/actions) 
 - [Docker Hub](https://hub.docker.com/r/wodby/memcached)
 
@@ -20,7 +20,6 @@ Overview:
 Supported tags and respective `Dockerfile` links:
 
 - `1`, `latest` [_(Dockerfile)_]
-- `1-alpine3.13`, `alpine3.13` [_(Dockerfile)_]
 
 ## Orchestration Actions
 

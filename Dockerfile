@@ -1,7 +1,6 @@
 ARG MEMCACHED_VER
-ARG ALPINE_VER
 
-FROM wodby/base-memcached:${MEMCACHED_VER}-alpine${ALPINE_VER}
+FROM memcached:${MEMCACHED_VER}-alpine
 
 ENV MEMCACHED_VER="${MEMCACHED_VER}"
 
