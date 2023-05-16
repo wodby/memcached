@@ -1,6 +1,6 @@
 -include env_make
 
-MEMCACHED_VER ?= 1.6.19
+MEMCACHED_VER ?= 1.6.20
 
 TAG ?= $(shell echo "${MEMCACHED_VER}" | grep -oE '^[0-9]+\.[0-9]+')
 
