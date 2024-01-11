@@ -19,5 +19,5 @@ jobs:
     - uses: actions/checkout@v2
     - uses: ./.github/actions
       with:
-        version: '1.6.22'
+        version: '1.6.23'
         tags: 1,latest
