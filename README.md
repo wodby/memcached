@@ -21,6 +21,8 @@ Supported tags and respective `Dockerfile` links:
 
 - `1`, `latest` [_(Dockerfile)_]
 
+All images built for `linux/amd64` and `linux/arm64`
+
 ## Orchestration Actions
 
 Usage:
