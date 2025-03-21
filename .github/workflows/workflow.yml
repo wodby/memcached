@@ -11,7 +11,7 @@ on:
 env:
   DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
   DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-  MEMCACHED1: '1.6.37'
+  MEMCACHED1: '1.6.38'
 
 jobs:
   memcached1-build:
