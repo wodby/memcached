@@ -1,6 +1,6 @@
 -include env_make
 
-MEMCACHED_VER ?= 1.6.38
+MEMCACHED_VER ?= 1.6.39
 
 MEMCACHED_VER_MINOR ?= $(shell echo "${MEMCACHED_VER}" | grep -oE '^[0-9]+\.[0-9]+')
 
