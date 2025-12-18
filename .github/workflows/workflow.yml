@@ -9,7 +9,7 @@ on:
     - '*'
 
 env:
-  MEMCACHED1: '1.6.39'
+  MEMCACHED1: '1.6.40'
 
 jobs:
   memcached1-build:
