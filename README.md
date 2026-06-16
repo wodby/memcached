@@ -23,6 +23,14 @@ Supported tags and respective `Dockerfile` links:
 
 All images built for `linux/amd64` and `linux/arm64`
 
+## Environment Variables
+
+| Variable | Description | Memcached option |
+| --- | --- | --- |
+| `MEMCACHED_MEMORY` | Memory limit in megabytes | `-m` |
+| `MEMCACHED_THREADS` | Number of threads | `-t` |
+| `MEMCACHED_MAX_CONNECTIONS` | Maximum simultaneous connections | `-c` |
+
 ## Orchestration Actions
 
 Usage:
@@ -31,6 +39,7 @@ make COMMAND [params ...]
  
 commands:
     check-ready host max_try wait_seconds delay_seconds
+    check-setting host setting value
     flushall host
     
 default params values:

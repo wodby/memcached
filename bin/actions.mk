@@ -1,4 +1,4 @@
-.PHONY: flushall check-ready check-live
+.PHONY: flushall check-ready check-live check-setting
 
 host ?= localhost
 max_try ?= 30
@@ -15,3 +15,6 @@ check-ready:
 
 check-live:
 	@echo "OK"
+
+check-setting:
+	printf "stats settings\r\nquit\r\n" | nc $(host) 11211 | grep "STAT $(setting) $(value)"
