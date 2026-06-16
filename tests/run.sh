@@ -8,6 +8,10 @@ fi
 
 env=()
 
+memcached_memory="${MEMCACHED_MEMORY:-64}"
+memcached_threads="${MEMCACHED_THREADS:-4}"
+memcached_max_connections="${MEMCACHED_MAX_CONNECTIONS:-1024}"
+
 if [[ -n "${MEMCACHED_MEMORY}" ]]; then
 	env+=(-e "MEMCACHED_MEMORY=${MEMCACHED_MEMORY}")
 fi
@@ -30,14 +34,6 @@ memcached() {
 memcached make check-ready host="${NAME}"
 memcached make flushall host="${NAME}"
 
-if [[ -n "${MEMCACHED_MEMORY}" ]]; then
-	memcached make check-setting host="${NAME}" setting=maxbytes value="$((MEMCACHED_MEMORY * 1024 * 1024))"
-fi
-
-if [[ -n "${MEMCACHED_THREADS}" ]]; then
-	memcached make check-setting host="${NAME}" setting=num_threads value="${MEMCACHED_THREADS}"
-fi
-
-if [[ -n "${MEMCACHED_MAX_CONNECTIONS}" ]]; then
-	memcached make check-setting host="${NAME}" setting=maxconns value="${MEMCACHED_MAX_CONNECTIONS}"
-fi
+memcached make check-setting host="${NAME}" setting=maxbytes value="$((memcached_memory * 1024 * 1024))"
+memcached make check-setting host="${NAME}" setting=num_threads value="${memcached_threads}"
+memcached make check-setting host="${NAME}" setting=maxconns value="${memcached_max_connections}"

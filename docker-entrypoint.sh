@@ -14,19 +14,17 @@ if [[ "${1}" == "memcached" ]]; then
     command="${1}"
     shift
 
+    MEMCACHED_MEMORY="${MEMCACHED_MEMORY:-64}"
+    MEMCACHED_THREADS="${MEMCACHED_THREADS:-4}"
+    MEMCACHED_MAX_CONNECTIONS="${MEMCACHED_MAX_CONNECTIONS:-1024}"
+
     set -- "${command}" "${@}"
 
-    if [[ -n "${MEMCACHED_MAX_CONNECTIONS}" ]]; then
-        set -- "${command}" -c "${MEMCACHED_MAX_CONNECTIONS}" "${@:2}"
-    fi
+    set -- "${command}" -c "${MEMCACHED_MAX_CONNECTIONS}" "${@:2}"
 
-    if [[ -n "${MEMCACHED_THREADS}" ]]; then
-        set -- "${command}" -t "${MEMCACHED_THREADS}" "${@:2}"
-    fi
+    set -- "${command}" -t "${MEMCACHED_THREADS}" "${@:2}"
 
-    if [[ -n "${MEMCACHED_MEMORY}" ]]; then
-        set -- "${command}" -m "${MEMCACHED_MEMORY}" "${@:2}"
-    fi
+    set -- "${command}" -m "${MEMCACHED_MEMORY}" "${@:2}"
 fi
 
 if [[ $1 == "make" ]]; then

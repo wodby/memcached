@@ -25,11 +25,11 @@ All images built for `linux/amd64` and `linux/arm64`
 
 ## Environment Variables
 
-| Variable | Description | Memcached option |
-| --- | --- | --- |
-| `MEMCACHED_MEMORY` | Memory limit in megabytes | `-m` |
-| `MEMCACHED_THREADS` | Number of threads | `-t` |
-| `MEMCACHED_MAX_CONNECTIONS` | Maximum simultaneous connections | `-c` |
+| Variable | Description | Default | Memcached option |
+| --- | --- | --- | --- |
+| `MEMCACHED_MEMORY` | Memory limit in megabytes | `64` | `-m` |
+| `MEMCACHED_THREADS` | Number of threads | `4` | `-t` |
+| `MEMCACHED_MAX_CONNECTIONS` | Maximum simultaneous connections | `1024` | `-c` |
 
 ## Orchestration Actions
 
