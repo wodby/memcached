@@ -1,6 +1,11 @@
+# check=skip=InvalidDefaultArgInFrom
+
+# The Makefile supplies the required digest-pinned BASE_IMAGE argument.
 ARG MEMCACHED_VER
 
-FROM memcached:${MEMCACHED_VER}-alpine
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+ARG MEMCACHED_VER
 
 ENV MEMCACHED_VER="${MEMCACHED_VER}"
 
